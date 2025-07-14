@@ -1,54 +1,53 @@
-# SE-Scripts
-
-![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=SE-Scripts.visitor-badge&right_text=My%20Page%20Visitors)
-
-A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&duration=2500&pause=500&color=A9F75A&center=true&vCenter=true&width=435&lines=HI+THERE+%F0%9F%91%8B%F0%9F%8F%BB!;WELCOME+TO+SE-SCRIPTS+%E2%9C%A8;CREATED+BY+ΞTΞRNAL+%E2%9C%A8;CO-SUPPORTED+BY+BEING+ZAIN+%E2%9C%A8)](https://git.io/typing-svg)
-
-![Maintainer](https://img.shields.io/badge/Creator-ΞTΞRNAL-black)
-![Maintainer](https://img.shields.io/badge/Collabrator-Being_Zain-black)
-
-## 📖 Scripts
 <details closed>
-  <summary>💣 Message Bomber</summary>
-  
-- **Name:** message_bomber
-- **Version:** 6.0
-- **Last Updated:** April 15, 2025
-- **Author:** ΞTΞRNAL
-- **Description:** A script for bombing your friends with custom messages. Just for educational purposes. May or May not cause bans.
+<summary> 🔍 Bypass Checker </summary>
 
- ## Features
-  
-- `Customizable Message Bombing`
-- `Anti Ban Features`
-- `Custom Message Input`
-- `Schedule Bomb Feature`
-- `Enhanced User Experience`
-- `Translations`
+- **Name:** bypass_checker  
+- **Version:** 1.0  
+- **Last Updated:** July 14, 2025  
+- **Author:** Suryadip Sarkar  
+- **Credits:** Inspired by community testing and research.  
+- **Requirements:** Works on devices/emulators with Snapchat installed  
+- **Description:** A script that helps detect whether a Snapchat bypass method (mod, proxy, or spoof) is working or blocked in real-time.
 
-## Download 
+## 📌 Features
+
+- `Instant Bypass Verification`
+- `Login Status Detection`
+- `Custom Headers Support`
+- `Proxy & VPN Compatibility`
+- `Real-Time Popup Notifications`
+- `Exportable Logs`
+- `Loop/Batch Testing Mode`
+- `Beginner-Friendly Code`
+
+## ⬇️ Download
+
+To download the latest version of the script, choose one of the following options:
 
 1. **Import from URL:**
 
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
+   Copy & paste this URL in your script loader or environment:
 
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/message_bomber.js)
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/bypass_checker.js)
 
 2. **Download from GitHub:**
 
-   Click the link below to download `Message Bomber` directly from GitHub:
+   Click below to download the `Bypass Checker` script directly from GitHub:
 
-   [Download Message Bomber](https://github.com/particle-box/SE-Scripts/blob/main/scripts/message_bomber.js)
+   [Download Bypass Checker](https://github.com/particle-box/repo/blob/main/bypass_checker.js).
 
-
-## Screenshots
+## 🖼️ Screenshots
 
 <p align="center">
-  <img src="scripts/screenshots/message_bomber_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/message_bomber_2.jpg" width="45%" />
+  <img src="screenshots/bypass_checker_1.jpg" width="45%" style="margin-right:10px" />
+  <img src="screenshots/bypass_checker_2.jpg" width="45%" />
 </p>
+
+## ⚠️ Disclaimer
+
+This script is provided **for educational purposes only**.  
+We do **not take any responsibility** for account bans, device restrictions, or any consequences resulting from its use.  
+Use it at your own risk.
 
 </details>
 
