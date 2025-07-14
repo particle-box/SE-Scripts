@@ -47,12 +47,6 @@ To download the latest version of the script, choose one of the following option
   <img src="scripts/screenshots/bypass_checker_2.jpg" width="45%" />
 </p>
 
-## ⚠️ Disclaimer
-
-This script is provided **for educational purposes only**.  
-We do **not take any responsibility** for account bans, device restrictions, or any consequences resulting from its use.  
-Use it at your own risk.
-
 </details>
 
 <details closed>
