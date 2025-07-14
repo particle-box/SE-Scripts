@@ -2,11 +2,10 @@
 <summary> 🔍 Bypass Checker </summary>
 
 - **Name:** bypass_checker  
-- **Version:** 1.0  
+- **Version:** 1.5  
 - **Last Updated:** July 14, 2025  
-- **Author:** Suryadip Sarkar  
-- **Credits:** Inspired by community testing and research.  
-- **Requirements:** Works on devices/emulators with Snapchat installed  
+- **Author:**  ΞTΞRNAL
+- **Requirements:** Only Works on SE & its related forks.
 - **Description:** A script that helps detect whether a Snapchat bypass method (mod, proxy, or spoof) is working or blocked in real-time.
 
 ## 📌 Features
@@ -34,13 +33,13 @@ To download the latest version of the script, choose one of the following option
 
    Click below to download the `Bypass Checker` script directly from GitHub:
 
-   [Download Bypass Checker](https://github.com/particle-box/repo/blob/main/bypass_checker.js).
+   [Download Bypass Checker](https://github.com/particle-box/SE-Scripts/blob/main/scripts/bypass_checker.js).
 
 ## 🖼️ Screenshots
 
 <p align="center">
-  <img src="screenshots/bypass_checker_1.jpg" width="45%" style="margin-right:10px" />
-  <img src="screenshots/bypass_checker_2.jpg" width="45%" />
+  <img src="scripts/screenshots/bypass_checker_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/bypass_checker_2.jpg" width="45%" />
 </p>
 
 ## ⚠️ Disclaimer
