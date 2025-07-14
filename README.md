@@ -5,7 +5,6 @@
 - **Version:** 1.5  
 - **Last Updated:** July 14, 2025  
 - **Author:**  ΞTΞRNAL
-- **Requirements:** Only Works on SE & its related forks.
 - **Description:** A script which detects if the bypass that has been implemented is working on newer versions of Snapchat
 
 ## 📌 Features
