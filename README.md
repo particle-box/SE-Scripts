@@ -1,3 +1,17 @@
+# SE-Scripts
+
+![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=SE-Scripts.visitor-badge&right_text=My%20Page%20Visitors)
+
+A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&duration=2500&pause=500&color=A9F75A&center=true&vCenter=true&width=435&lines=HI+THERE+%F0%9F%91%8B%F0%9F%8F%BB!;WELCOME+TO+SE-SCRIPTS+%E2%9C%A8;CREATED+BY+SURYADIP+SARKAR+%E2%9C%A8;CO-SUPPORTED+BY+BEING+ZAIN+%E2%9C%A8)](https://git.io/typing-svg)
+
+![Maintainer](https://img.shields.io/badge/Creator-ΞTΞRNAL-black)
+
+![Maintainer](https://img.shields.io/badge/Collabrator-Being_Zain-black)
+
+## 📖 Scripts
+
 <details closed>
 <summary> 🔍 Bypass Checker </summary>
 
