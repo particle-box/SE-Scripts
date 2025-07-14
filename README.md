@@ -16,7 +16,46 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
 
 ## 📖 Scripts
+  <summary>🚨 Bypass Checker</summary>
+  
+- **Name:** bypass_checker
+- **Version:** 1.0
+- **Last Updated:** July 14, 2025
+- **Author:** Suryadip Sarkar
+- **Description:** A script to verify whether your bypass method is working or blocked.This script is provided for educational purposes only.We do not take any responsibility for account bans.
+
+ ## Features
+  
+- `Verifies security measures bypassed`
+- `Fast execution for real-time validation`
+- `Real time popup alerts`
+
+## Download 
+
+1. **Import from URL:**
+
+   Copy & paste this url in the `Import from URL` button in the scripts tab.
+
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/bypass_checker.js)
+
+2. **Download from GitHub:**
+
+  Click the link below to download `Message Bomber` directly from GitHub:
+
+  [Download Message Bomber](https://github.com/particle-box/SE-Scripts/blob/main/scripts/bypass_checker.js)
+
+
+## Screenshots
+
+- <p align="center">
+  <img src="scripts/screenshots/message_bomber_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/message_bomber_2.jpg" width="45%" />
+</p>
+
+</details>
+
 <details closed>
+  
   <summary>💣 Media Bomber</summary>
   
 - **Name:** message_bomber
