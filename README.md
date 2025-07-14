@@ -6,18 +6,12 @@
 - **Last Updated:** July 14, 2025  
 - **Author:**  ΞTΞRNAL
 - **Requirements:** Only Works on SE & its related forks.
-- **Description:** A script that helps detect whether a Snapchat bypass method (mod, proxy, or spoof) is working or blocked in real-time.
+- **Description:** A script which detects if the bypass that has been implemented is working on newer versions of Snapchat
 
 ## 📌 Features
 
-- `Instant Bypass Verification`
-- `Login Status Detection`
-- `Custom Headers Support`
-- `Proxy & VPN Compatibility`
-- `Real-Time Popup Notifications`
-- `Exportable Logs`
-- `Loop/Batch Testing Mode`
-- `Beginner-Friendly Code`
+- `Detects if the Bypass is working`
+- `Notifies the user through toast messages`
 
 ## ⬇️ Download
 
