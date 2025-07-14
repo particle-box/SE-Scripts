@@ -9,9 +9,6 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 ![Maintainer](https://img.shields.io/badge/Creator-ΞTΞRNAL-black)
 ![Maintainer](https://img.shields.io/badge/Collabrator-Being_Zain-black)
 
-> [!Caution]  
-> This project is now abandoned and won't be maintained again.
-
 ## 📖 Scripts
 <details closed>
   <summary>💣 Message Bomber</summary>
