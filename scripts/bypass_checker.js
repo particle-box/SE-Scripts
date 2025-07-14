@@ -1,91 +1,33 @@
 // ==SE_module==
 // name: bypass_checker
 // displayName: Bypass Checker
-// description: A simple script which lets the users know through a toast message if the bypass is working on newer versions of Snapchat.
-// version: 1.0
+// description: Checks if the bypass is working on newer versions of Snapchat and shows it as a toast.
+// version: 1.5
 // updateUrl: https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/bypass_checker.js
 // author: ΞTΞRNAL
 // ==/SE_module==
 
+var messaging = require('messaging');
 
-if (currentSide === "manager") {
-    /***********************************/
-    /** MANAGER-SIDE CODE       **/
-    /***********************************/
+module.onSnapApplicationLoad = () => {
+    try {
+        var messagingClass = messaging.getClass();
+        var modContextField = messagingClass.getDeclaredField("modContext");
+        modContextField.setAccessible(true);
+        var modContextInstance = modContextField.get(messaging);
 
-    var ipc = require("ipc");
+        var modContextClass = modContextInstance.getClass();
+        var disablePluginField = modContextClass.getDeclaredField("disablePlugin");
+        disablePluginField.setAccessible(true);
+        var isPluginDisabled = disablePluginField.get(modContextInstance);
 
-    function checkLogsAndRespond() {
-        var bypassFound = false;
-        var logDirectoryPath = "/data/data/me.rhunk.snapenhance/cache/logs/";
-
-        try {
-            var File = type("java.io.File");
-            var logDir = File.__new__(logDirectoryPath);
-
-            if (logDir.exists() && logDir.isDirectory()) {
-                var files = logDir.listFiles();
-                if (files !== null) {
-                    for (var i = 0; i < files.length; i++) {
-                        var file = files[i];
-                        if (file.isFile()) {
-                            var bufferedReader = type("java.io.BufferedReader").__new__(type("java.io.FileReader").__new__(file));
-                            var line;
-                            while ((line = bufferedReader.readLine()) !== null) {
-                                if (line.includes("disablePlugin=true")) {
-                                    bypassFound = true;
-                                    break;
-                                }
-                            }
-                            bufferedReader.close();
-                            if (bypassFound) break;
-                        }
-                    }
-                }
-            }
-        } catch (e) {
-            logError("UnifiedLogChecker[Manager]: Error reading logs: " + e);
+        if (isPluginDisabled) {
+            shortToast("Bypass is working!");
+        } else {
+            shortToast("Bypass is not working!");
         }
-        
-        ipc.emit("bypass_status_response", bypassFound);
+    } catch (e) {
+        logError("Failed to check bypass status: " + e);
+        shortToast("Could not determine bypass status.");
     }
-
-    module.onSnapEnhanceLoad = () => {
-        ipc.on("request_bypass_status", () => {
-            checkLogsAndRespond();
-        });
-    };
-
-} else if (currentSide === "core") {
-    /********************************/
-    /** CORE-SIDE CODE       **/
-    /********************************/
-
-    var ipc = require("ipc");
-    var interfaces = require('java-interfaces');
-
-    var hasAlreadyChecked = false;
-
-    module.onSnapMainActivityCreate = activity => {
-        if (hasAlreadyChecked) {
-            return;
-        }
-
-        ipc.on("bypass_status_response", (args) => {
-            var bypassStatus = args[0];
-            
-            activity.runOnUiThread(interfaces.runnable(() => {
-                if (bypassStatus) {
-                    longToast("Bypass is working!");
-                } else {
-                    longToast("Bypass is not working! Try reopening Snapchat.");
-                }
-            }));
-
-            ipc.on("bypass_status_response", () => {});
-        });
-
-        ipc.emit("request_bypass_status");
-        hasAlreadyChecked = true;
-    };
-}
+};
