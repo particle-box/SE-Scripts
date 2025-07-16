@@ -4,7 +4,7 @@
 // description: A Script That Allows For Scheduling Messages and Recurring Messages. Please don't remove Snapchat from the background when your message is scheduled.
 // version: 2.6 BETA
 // author: ΞTΞRNAL
-// credits: rhunk & Jacob Thomas
+// credits: rhunk & bocajthomas
 // minSEVersion: Versions after 20/08/24
 // ==/SE_module==
 

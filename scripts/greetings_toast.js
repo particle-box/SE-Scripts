@@ -4,7 +4,7 @@
 // description: A Script that shows a greetings toast on the startup of Snapchat. Enter your username and birthday in the format: username dd/mm/yyyy Note: Avoid including your full name as the toast will not work properly.                                     Eg: ΞTΞRNAL 20/01/1900. 
 // version: 3.2
 // author: ΞTΞRNAL
-// credits: Gabriel Modz & Jacob Thomas & Jimothy
+// credits: Gabriel Modz & bocajthomas & Jimothy
 // ==/SE_module==
 
 var networking = require("networking");
