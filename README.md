@@ -14,8 +14,8 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 <summary> 🔍 Bypass Checker </summary>
 
 - **Name:** bypass_checker  
-- **Version:** 1.5  
-- **Last Updated:** July 14, 2025  
+- **Version:** 1.6  
+- **Last Updated:** July 17, 2025  
 - **Author:**  ΞTΞRNAL
 - **Description:** A script which detects if the bypass that has been implemented is working on newer versions of Snapchat
 
