@@ -5,7 +5,7 @@
 // version: 2.8 STABLE
 // updateUrl: https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/scheduled_messages.js
 // author: ΞTΞRNAL
-// credits: rhunk & Jacob Thomas
+// credits: rhunk & bocajthomas
 // minSEVersion: Versions after 20/08/24
 // ==/SE_module==
 

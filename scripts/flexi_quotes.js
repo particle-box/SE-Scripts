@@ -4,7 +4,7 @@
 // description: A script that shows customizable motivation quotes on Snapchat startup, with options for dialog or toast notifications.
 // version: 5.2
 // updateUrl: https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/flexi_quotes.js
-// author: ΞTΞRNAL & Jacob Thomas
+// author: ΞTΞRNAL & bocajthomas
 // ==/SE_module==
 
 var networking = require("networking");

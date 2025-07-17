@@ -56,7 +56,7 @@ To download the latest version of the script, choose one of the following option
 - **Version:** 2.8
 - **Last Updated:** April 15, 2025
 - **Author:** ΞTΞRNAL
-- **Credits:** rhunk & Jacob Thomas
+- **Credits:** rhunk & bocajthomas
 - **Requirements:** Only works on SE versions released after 20/08/24
 - **Description:** A Script That Allows For Scheduling Messages. Please don't remove Snapchat from the background when your message is scheduled.
 
@@ -133,7 +133,7 @@ To download the latest version of the script, choose one of the following option
 - **Name:** flexi_quotes
 - **Version:** 5.2
 - **Last Updated:** April 15, 2025
-- **Author:** ΞTΞRNAL & Jacob Thomas
+- **Author:** ΞTΞRNAL & bocajthomas
 - **Description:** A Script that shows a random motivation quote dialog on the startup of Snapchat.
 
 ## Features 
@@ -307,7 +307,7 @@ To download the latest version of the script, choose one of the following option
 - **Name:** custom_toast
 - **Version:** 1.6
 - **Last Updated:** April 15, 2025
-- **Author:** Gabriel Modz, Jacob Thomas & ΞTΞRNAL
+- **Author:** Gabriel Modz, bocajthomas & ΞTΞRNAL
 - **Description:** A Script that shows a custom toast on the startup of Snapchat.
 
 ## Features 
