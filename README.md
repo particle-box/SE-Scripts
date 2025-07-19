@@ -353,7 +353,7 @@ Follow these steps to install and use the script:
 
    Click on this link for furthur instructions on how to install `Snapenhance`:
    
-   [Installation Guide](https://github.com/rhunk/SnapEnhance/wiki/Installation-Guide)
+   [Installation Guide](https://hypernotepad.com/n/ec03baa34f4665df)
 
                                       OR
 
