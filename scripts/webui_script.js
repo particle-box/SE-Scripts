@@ -4,6 +4,7 @@
 // description: This script displays a WebUI in Snapchat which allows you to play Games, read News, listen to the Radio, etc.
 // version: 1.0
 // author: ΞTΞRNAL & bocajthomas
+// updateUrl: https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/webui_script.js
 // permissions: unsafe-classloader
 // ==/SE_module==
 
@@ -28,15 +29,12 @@
   var currentVersion = "v1.0";
   let updateAvailable = false;
 
-  var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
-  var messagesJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/messages.json`;
+  var versionJsonUrl = `https://raw.githubusercontent.com/owner}/${repo}/main/version.json`;
+  var messagesJsonUrl = `https://raw.githubusercontent.com/owner}/${repo}/main/messages.json`;
 
   function checkForNewVersion() {
     networking.getUrl(versionJsonUrl, (error, response) => {
-        if (error) {
-            console.error("Error fetching version.json:", error);
-            return;
-        }
+        if (error) { return; }
         try {
             var versions = JSON.parse(response);
             var latestVersion = versions[scriptName];
@@ -44,18 +42,13 @@
                 longToast("A new version of WebUI Script is available!");
                 updateAvailable = true;
             }
-        } catch (e) {
-            console.error("Error parsing version.json:", e);
-        }
+        } catch (e) { }
     });
   }
 
   function checkForNewMessages() {
     networking.getUrl(messagesJsonUrl, (error, response) => {
-        if (error) {
-            console.error("Error fetching messages.json:", error);
-            return;
-        }
+        if (error) { return; }
         try {
             var messages = JSON.parse(response);
             for (var i = 0; i < messages.length; i++) {
@@ -67,9 +60,7 @@
                     break; 
                 }
             }
-        } catch (e) {
-            console.error("Error parsing messages.json:", e);
-        }
+        } catch (e) { }
     });
   }
 
@@ -91,28 +82,40 @@
             const WebViewClass = findClass("android.webkit.WebView", true);
             const AlertDialogBuilderClass = findClass("android.app.AlertDialog$Builder", true);
             const ContextClass = findClass("android.content.Context", true);
-
-            if (!WebViewClass || !AlertDialogBuilderClass || !ContextClass) {
-                console.error("Could not find one or more required Android classes for WebView.");
-                return;
-            }
+            const WebViewClientClass = findClass("android.webkit.WebViewClient", true);
 
             const webViewConstructor = WebViewClass.getConstructor(ContextClass);
             const webView = webViewConstructor.newInstance(activity);
-            webView.getSettings().setJavaScriptEnabled(true);
+
+            const settings = webView.getSettings();
+            settings.setJavaScriptEnabled(true);
+            settings.setDomStorageEnabled(true);
+
+            webView.setWebViewClient(WebViewClientClass.getConstructor().newInstance());
+
             webView.loadUrl(url);
 
             const builderConstructor = AlertDialogBuilderClass.getConstructor(ContextClass);
             const builder = builderConstructor.newInstance(activity);
             builder.setView(webView);
             builder.setTitle(title);
-            builder.setPositiveButton("Close", null);
-
+            
+            builder.setPositiveButton("Close", (dialog, which) => {
+                dialog.dismiss();
+            });
+            
             const dialog = builder.create();
+            
+            dialog.setOnDismissListener((dialogInterface) => {
+                if (webView) {
+                    webView.destroy();
+                }
+            });
+
             dialog.show();
 
         } catch (error) {
-            console.error("Failed to create WebView dialog: " + JSON.stringify(error));
+            console.error("Failed to create WebView dialog: " + error.toString());
         }
     });
   }
