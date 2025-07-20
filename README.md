@@ -11,7 +11,7 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 ## 📖 Scripts
 
 <details closed>
-<summary>🌐 WebUI </summary>
+<summary>🌐 WebUI Script </summary>
 
 - **Name:** webui_script
 - **Version:** 1.0  
