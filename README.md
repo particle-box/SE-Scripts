@@ -16,7 +16,46 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 
 
 ## 📖 Scripts
-  <summary>🚨 Bypass Checker</summary>
+<details closed>
+<summary>🌐 WebUi Script </summary>
+
+- **Name:** WebUi Script  
+- **Version:** 1.5  
+- **Last Updated:** July 20, 2025  
+- **Author:** ✦ ETERNAL  
+- **Description:** This script displays a WebUI in Snapchat which allows you to play Games, read News, listen to the Radio, etc.
+
+## 📌 Features
+
+- Play games  
+- Read news  
+- Listen to Radio
+
+## 🔽 Download
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Import from URL:**
+
+   Copy & paste this URL in your script loader or environment:  
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/webui.js)
+
+2. **Download from GitHub:**
+
+   Click below to download the `WebUi Script` directly from GitHub:  
+   [Download WebUi Script](https://github.com/particle-box/SE-Scripts/blob/main/scripts/webui.js)
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="scripts/screenshots/webui_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/webui_2.jpg" width="45%" />
+</p>
+
+</details>
+
+<details closed>
+<summary>🚨 Bypass Checker</summary>
   
 - **Name:** bypass_checker
 - **Version:** 1.0
