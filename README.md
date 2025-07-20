@@ -255,53 +255,6 @@ To download the latest version of the script, choose one of the following option
 </details>
 
 <details closed>
-<summary> 🦹🏻 Daily News </summary>
-  
-- **Name:** daily_news
-- **Version:** 2.3
-- **Last Updated:** Daily
-- **Author:** ΞTΞRNAL
-- **Description:**  A script that shows daily news as a dialog on Snapchat startup.
-
-## Features 
-
-- `Fetch Daily News`
-- `Display Daily News In Dialogue`
-- `Font Size`
-- `Font Color`
-- `Hex Code Validation`
-- `Refresh Button`
-- `Translations`
-- `More Script Button`
-- `Info Button`
-
-## Download 
-
-To download the latest version of the script, choose one of the following options:
-
-
-1. **Import from URL:**
-
-   Copy & paste this url in the `Import from URL` button in the scripts tab.
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/daily_news.js)
-
-2. **Download from GitHub:**
-
-   Click the link below to download `Daily News` directly from GitHub:
-
-   [Download Daily News](https://github.com/particle-box/SE-Scripts/blob/main/scripts/daily_news.js)
-
-## Screenshots
-
-  <p align="center">
-  <img src="scripts/screenshots/daily_news_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/daily_news_2.jpg" width="45%" />
-</p>
-
-</details>
-
-<details closed>
   <summary> 🐥 Custom Toast </summary>
 
 - **Name:** custom_toast
