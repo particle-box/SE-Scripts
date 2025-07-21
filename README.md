@@ -16,7 +16,7 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 - **Name:** webui_script
 - **Version:** 1.0  
 - **Last Updated:** July 20, 2025  
-- **Author:** ΞTΞRNAL & Bocajthomas
+- **Author:** ΞTΞRNAL & bocajthomas
 - **Description:** This script displays a WebUI in Snapchat which allows you to play Games, read News, listen to the Radio, etc.
 
 ## 📌 Features
