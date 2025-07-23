@@ -11,44 +11,6 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 ## 📖 Scripts
 
 <details closed>
-<summary>🌐 WebUI Script </summary>
-
-- **Name:** webui_script
-- **Version:** 1.2  
-- **Last Updated:** July 22, 2025  
-- **Author:** ΞTΞRNAL & bocajthomas
-- **Description:** This script displays a WebUI in Snapchat which allows you to play Games, read News, listen to the Radio, etc.
-
-## 📌 Features
-
-- Play games  
-- Read news  
-- Listen to Radio
-
-## 🔽 Download
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Import from URL:**
-
-   Copy & paste this URL in your script loader or environment:  
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/refs/heads/main/scripts/webui_script.js)
-
-2. **Download from GitHub:**
-
-   Click below to download the `WebUI` script directly from GitHub:  
-   [Download WebUI](https://github.com/particle-box/SE-Scripts/blob/main/scripts%2Fwebui_script.js)
-
-## 📸 Screenshots
-
-<p align="center">
-  <img src="scripts/screenshots/webui_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/webui_2.jpg" width="45%" />
-</p>
-
-</details>
-
-<details closed>
 <summary> 🔍 Bypass Checker </summary>
 
 - **Name:** bypass_checker  
@@ -83,6 +45,45 @@ To download the latest version of the script, choose one of the following option
 <p align="center">
   <img src="scripts/screenshots/bypass_checker_1.jpg" width="45%" style="margin-right:10px;" />
   <img src="scripts/screenshots/bypass_checker_2.jpg" width="45%" />
+</p>
+
+</details>
+
+
+<details closed>
+<summary>🌐 WebUI Script </summary>
+
+- **Name:** webui_script
+- **Version:** 1.2  
+- **Last Updated:** July 22, 2025  
+- **Author:** ΞTΞRNAL & bocajthomas
+- **Description:** This script displays a WebUI in Snapchat which allows you to play Games, read News, listen to the Radio, etc.
+
+## 📌 Features
+
+- Play games  
+- Read news  
+- Listen to Radio
+
+## 🔽 Download
+
+To download the latest version of the script, choose one of the following options:
+
+1. **Import from URL:**
+
+   Copy & paste this URL in your script loader or environment:  
+   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/refs/heads/main/scripts/webui_script.js)
+
+2. **Download from GitHub:**
+
+   Click below to download the `WebUI` script directly from GitHub:  
+   [Download WebUI](https://github.com/particle-box/SE-Scripts/blob/main/scripts%2Fwebui_script.js)
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="scripts/screenshots/webui_1.jpg" width="45%" style="margin-right:10px;" />
+  <img src="scripts/screenshots/webui_2.jpg" width="45%" />
 </p>
 
 </details>
