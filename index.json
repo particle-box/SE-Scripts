@@ -1,0 +1,60 @@
+{
+  "scripts": [
+    {
+      "name": "bypass_checker",
+      "author": "ΞTΞRNAL",
+      "description": "A script which detects if the bypass that has been implemented is working on newer versions of Snapchat",
+      "version": "1.6",
+      "filepath": "scripts/bypass_checker.js"
+    },
+    {
+      "name": "webui_script",
+      "author": "ΞTΞRNAL & bocajthomas",
+      "description": "This script displays a WebUI in Snapchat which allows you to play Games, read News, listen to the Radio, etc.",
+      "version": "1.2",
+      "filepath": "scripts/webui_script.js"
+    },
+    {
+      "name": "scheduled_messages",
+      "author": "ΞTΞRNAL",
+      "description": "A Script That Allows For Scheduling Messages. Please don't remove Snapchat from the background when your message is scheduled.",
+      "version": "2.8 STABLE",
+      "filepath": "scripts/scheduled_messages.js"
+    },
+    {
+      "name": "greetings_toast",
+      "author": "ΞTΞRNAL",
+      "description": "A Script that shows a greetings toast on the startup of Snapchat. Enter your username and birthday in the format: username dd/mm/yyyy Note: Avoid including your full name as the toast will not work properly.                                     Eg: ΞTΞRNAL 20/01/1900.",
+      "version": "3.2",
+      "filepath": "scripts/greetings_toast.js"
+    },
+    {
+      "name": "flexi_quotes",
+      "author": "ΞTΞRNAL & bocajthomas",
+      "description": "A script that shows customizable motivation quotes on Snapchat startup, with options for dialog or toast notifications.",
+      "version": "5.2",
+      "filepath": "scripts/flexi_quotes.js"
+    },
+    {
+      "name": "custom_reminders",
+      "author": "ΞTΞRNAL",
+      "description": "A Script that shows custom reminders with countdowns based on specified dates.",
+      "version": "1.2",
+      "filepath": "scripts/custom_reminders.js"
+    },
+    {
+      "name": "saved_replies",
+      "author": "ΞTΞRNAL",
+      "description": "A Script That Allows Users to Save and Send Custom Replies",
+      "version": "1.6",
+      "filepath": "scripts/saved_replies.js"
+    },
+    {
+      "name": "custom_toast",
+      "author": "Gabriel Modz, bocajthomas & ΞTΞRNAL",
+      "description": "A Script that shows a custom toast on the startup of Snapchat.",
+      "version": "1.6",
+      "filepath": "scripts/custom_toast.js"
+    }
+  ]
+}
