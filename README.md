@@ -77,7 +77,7 @@ To download the latest version of the script, choose one of the following option
 2. **Download from GitHub:**
 
    Click below to download the `WebUI` script directly from GitHub:  
-   [Download WebUI](https://github.com/particle-box/SE-Scripts/blob/main/scripts%2Fwebui_script.js)
+   [Download WebUI Script](https://github.com/particle-box/SE-Scripts/blob/main/scripts%2Fwebui_script.js)
 
 ## 📸 Screenshots
 
