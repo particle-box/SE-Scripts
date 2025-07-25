@@ -27,13 +27,13 @@
   var repo = "SE-Scripts";
   var scriptName = "webui_script";
   var currentVersion = "v1.2";
-  let updateAvailable = false;
+  var updateAvailable = false;
 
-  var versionJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/version.json`;
-  var messagesJsonUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/messages.json`;
+  var versionJsonUrl = "https://raw.githubusercontent.com/" + owner + "/" + repo + "/main/version.json";
+  var messagesJsonUrl = "https://raw.githubusercontent.com/" + owner + "/" + repo + "/main/messages.json";
 
   function checkForNewVersion() {
-    networking.getUrl(versionJsonUrl, (error, response) => {
+    networking.getUrl(versionJsonUrl, function (error, response) {
       if (error) {
         console.error("Error fetching version.json:", error);
         return;
@@ -52,7 +52,7 @@
   }
 
   function checkForNewMessages() {
-    networking.getUrl(messagesJsonUrl, (error, response) => {
+    networking.getUrl(messagesJsonUrl, function (error, response) {
       if (error) {
         console.error("Error fetching messages.json:", error);
         return;
@@ -61,7 +61,7 @@
         var messages = JSON.parse(response);
         for (var i = 0; i < messages.length; i++) {
           var message = messages[i];
-          var messageId = `webview_toolbox_message_${message.id}`;
+          var messageId = "webview_toolbox_message_" + message.id;
           if (!config.getBoolean(messageId, false)) {
             longToast(message.text);
             config.setBoolean(messageId, true, true);
@@ -76,101 +76,104 @@
 
   var mainActivity = null;
 
-  module.onSnapMainActivityCreate = activity => {
+  module.onSnapMainActivityCreate = function (activity) {
     mainActivity = activity;
     checkForNewVersion();
     checkForNewMessages();
   };
 
-  module.onUnload = () => {
+  module.onUnload = function () {
     longToast(goodbyePrompt);
   };
 
-  function openWebView(activity, url, title) {
-    activity.runOnUiThread(() => {
+  function openWebView(activity, url) {
+    activity.runOnUiThread(function () {
       try {
-        const WebViewClass = findClass("android.webkit.WebView", true);
-        const AlertDialogBuilderClass = findClass("android.app.AlertDialog$Builder", true);
-        const ContextClass = findClass("android.content.Context", true);
+        var WebViewClass = findClass("android.webkit.WebView", true);
+        var DialogClass = findClass("android.app.Dialog", true);
+        var ContextClass = findClass("android.content.Context", true);
 
-        if (!WebViewClass || !AlertDialogBuilderClass || !ContextClass) {
-          console.error("Could not find one or more required Android classes for WebView.");
+        if (!WebViewClass || !DialogClass || !ContextClass) {
+          console.error("Could not find required Android classes for WebView/Dialog.");
           return;
         }
 
-        const webViewConstructor = WebViewClass.getConstructor(ContextClass);
-        const webView = webViewConstructor.newInstance(activity);
+        // Create WebView with the activity context
+        var webViewConstructor = WebViewClass.getConstructor(ContextClass);
+        var webView = webViewConstructor.newInstance(activity);
 
         var settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
         settings.setDatabaseEnabled(true);
         settings.setAppCacheEnabled(true);
+        settings.setAllowContentAccess(true);
+        settings.setAllowFileAccess(true);
+
         var cacheDir = activity.getCacheDir().getAbsolutePath();
         settings.setAppCachePath(cacheDir);
 
         webView.loadUrl(url);
 
-        const builderConstructor = AlertDialogBuilderClass.getConstructor(ContextClass);
-        const builder = builderConstructor.newInstance(activity);
-        builder.setView(webView);
-        builder.setTitle(title);
-        builder.setPositiveButton("Close", null);
+        // Create Dialog using single parameter constructor with activity context (no theme)
+        var dialogConstructor = DialogClass.getConstructor(ContextClass);
+        var dialog = dialogConstructor.newInstance(activity);
 
-        const dialog = builder.create();
+        dialog.setContentView(webView);
+
         dialog.show();
 
       } catch (error) {
-        console.error("Failed to create WebView dialog: " + JSON.stringify(error));
+        console.error("Failed to create WebView dialog with activity context: ", error);
       }
     });
   }
 
   function showSelectionDialog(activity) {
-    activity.runOnUiThread(() => {
-      var selectionDialog = im.createAlertDialog(activity, (builder, dialog) => {
+    activity.runOnUiThread(function () {
+      var selectionDialog = im.createAlertDialog(activity, function (builder, dialog) {
 
-        builder.row(rowBuilder => {
+        builder.row(function (rowBuilder) {
           rowBuilder.text("🌐 WebUI").fontSize(22);
         }).arrangement("center").fillMaxWidth();
 
         builder.text("").fontSize(8);
-        builder.row(rowBuilder => {
+        builder.row(function (rowBuilder) {
           rowBuilder.text("Explore a world of content with a single click!").fontSize(16);
         }).arrangement("center").fillMaxWidth();
         builder.text("").fontSize(15);
 
-        builder.row(rowBuilder => {
+        builder.row(function (rowBuilder) {
           rowBuilder.text("🎮 Games").fontSize(18);
-          rowBuilder.button("🚀 Open", () => openWebView(activity, "https://poki.com/", "Games"));
+          builder.button("🚀 Open", function () { openWebView(activity, "https://poki.com/"); });
         }).arrangement("spaceBetween").alignment("centerVertically").fillMaxWidth();
 
         builder.text("").fontSize(10);
-        builder.row(rowBuilder => {
+        builder.row(function (rowBuilder) {
           rowBuilder.text("📰 News").fontSize(18);
-          rowBuilder.button("🚀 Open", () => openWebView(activity, "https://en.m.wikinews.org/wiki/Main_Page", "News"));
+          builder.button("🚀 Open", function () { openWebView(activity, "https://en.m.wikinews.org/wiki/Main_Page"); });
         }).arrangement("spaceBetween").alignment("centerVertically").fillMaxWidth();
 
         builder.text("").fontSize(10);
-        builder.row(rowBuilder => {
+        builder.row(function (rowBuilder) {
           rowBuilder.text("📻 Radio").fontSize(18);
-          rowBuilder.button("🚀 Open", () => openWebView(activity, "https://tunein.com/", "Radio"));
+          rowBuilder.button("🚀 Open", function () { openWebView(activity, "https://tunein.com/"); });
         }).arrangement("spaceBetween").alignment("centerVertically").fillMaxWidth();
 
         builder.text("").fontSize(15);
-        builder.row(rowBuilder => {
+        builder.row(function (rowBuilder) {
           rowBuilder.text("------------------------------");
         }).arrangement("center").fillMaxWidth();
 
-        builder.row(rowBuilder => {
+        builder.row(function (rowBuilder) {
           rowBuilder.text("🙏 Credits: bocajthomas").fontSize(12);
           rowBuilder.text("👨‍💻 Made By ΞTΞRNAL").fontSize(12);
         }).arrangement("spaceBetween").alignment("centerVertically").fillMaxWidth();
 
         builder.text("").fontSize(10);
 
-        builder.row(rowBuilder => {
-          rowBuilder.button("❌ Close", () => dialog.dismiss());
+        builder.row(function (rowBuilder) {
+          rowBuilder.button("❌ Close", function () { dialog.dismiss(); });
         }).arrangement("center").fillMaxWidth();
       });
 
@@ -179,9 +182,9 @@
   }
 
   function createToolboxUI() {
-    im.create("conversationToolbox", (builder, args) => {
+    im.create("conversationToolbox", function (builder, args) {
       try {
-        builder.button("🌐 Open", () => {
+        builder.button("🌐 Open", function () {
           if (mainActivity) {
             showSelectionDialog(mainActivity);
           } else {
@@ -189,7 +192,7 @@
           }
         });
       } catch (error) {
-        console.error("Error creating the WebView toolbox UI: " + JSON.stringify(error));
+        console.error("Error creating the WebView toolbox UI: ", error);
       }
     });
   }
