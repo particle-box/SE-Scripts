@@ -332,26 +332,20 @@ To download the latest version of the script, choose one of the following option
 
 </details>
 
-## Install SE / SE-EXTENDED 
+## Install Snapenhance
 
 <details closed>
   <summary> 🦋 How to use </summary>
   
 Follow these steps to install and use the script:
 
-1. **Download & Install Snapenhance/SE Extended:**
+1. **Download & Install Snapenhance:**
 
-   *Ignore this step if you already have Snapenhance/SE Extended installed.*
+   *Ignore this step if you already have Snapenhance installed.*
 
    Click on this link for furthur instructions on how to install `Snapenhance`:
    
    [Installation Guide](https://hypernotepad.com/n/ec03baa34f4665df)
-
-                                      OR
-
-   Click on this link for furthur instructions on how to install `SE Extended`:
-   
-   [Installation Guide](https://github.com/bocajthomas/SE-Extended/wiki/Installation-Guide)
 
 3. **Download the Script(Follow either of the two methods):**
 
@@ -360,7 +354,7 @@ Follow these steps to install and use the script:
      - Click on the three dots icon on the top right corner & then click on the "Download" button.
 
    - **Import from URL:**
-     - Copy the url by pressing and holding it and then paste it in the `Import from URL` button in the Scripts tab of SE/SE Extended.
+     - Copy the url by pressing and holding it and then paste it in the `Import from URL` button in the Scripts tab of Snapenhance.
        
 4. **Installation:**
    *Ignore this step if you have followed the `Import from URL` Method*
@@ -368,7 +362,7 @@ Follow these steps to install and use the script:
 
 5. **Enable the Script:**
 
-   - Open SE/SE Extended.
+   - Open Snapenhance.
    - Navigate to the 'Scripts' section and enable the script.
 
 6. **Configuration:**
@@ -383,9 +377,9 @@ Follow these steps to install and use the script:
   <summary> 🌔 FAQS </summary>
 
 - **Failed to Import Script!**
-  - You have to first give SE access to your Scripts Folder.(To do this, head over to the Scripts Tab in SE/SE Extended)
+  - You have to first give Snapenhance access to your Scripts Folder.(To do this, head over to the Scripts Tab in Snapenhance)
  
-- **SE/SE Extended crashes when I import the script/When I open the `Scripts` Tab!!**
+- **Snapenhance crashes when I import the script/When I open the `Scripts` Tab!!**
   - This is due to duplicate scripts existing in your scripts folder. Head over to your File Manager and navigate to your Scripts Folder and Delete all the duplicate scripts.
  
 - **Tapping on Import From URL Button Does Nothing!**
@@ -393,7 +387,7 @@ Follow these steps to install and use the script:
 
 - **Script Not Working:**
   - Ensure the script is placed in the correct folder.
-  - Check if the script is enabled in SE/SE Extended.
+  - Check if the script is enabled in Snapenhance.
 
 - **Toasts not showing up sometimes**
   - Scripts like custom_toast.js, greetings_toast.js, etc which are based on toasts require Snapchat to be closed completely then opened. If you have just pressed the home button to exit Snapchat and reopened Snapchat again, the toast might not show up. You also need to clear Snapchat from the recents menu or exit it properly in order for the toast to show up.
