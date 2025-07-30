@@ -332,10 +332,10 @@ To download the latest version of the script, choose one of the following option
 
 </details>
 
-## Install Snapenhance
+## How to use
 
 <details closed>
-  <summary> 🦋 How to use </summary>
+  <summary> ⚙️ Install Snapenhance </summary>
   
 Follow these steps to install and use the script:
 
