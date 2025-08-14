@@ -1,8 +1,8 @@
 // ==SE_module==
 // name: bypass_checker
 // displayName: Bypass Checker
-// description: Checks if the bypass is working on newer versions of Snapchat and shows it as a toast.
-// version: 1.6
+// description: Checks if the bypass is working on newer versions of Snapchat.
+// version: 2.0
 // updateUrl: https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/bypass_checker.js
 // author: ΞTΞRNAL
 // ==/SE_module==
@@ -22,7 +22,7 @@ module.onSnapApplicationLoad = () => {
         var isPluginDisabled = disablePluginField.get(modContextInstance);
 
         if (isPluginDisabled == true) { 
-            shortToast("Bypass is working!");
+            console.log("Bypass is working!");
         } else {
             shortToast("Bypass is not working!");
         }
