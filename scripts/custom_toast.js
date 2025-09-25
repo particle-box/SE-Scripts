@@ -9,7 +9,7 @@
 (function () {
     globalThis.module = globalThis.module || { exports: {} };
 
-    // Bindings (now registered on both sides)
+    // Bindings (interface-manager is now available on both sides)
     var config = require("config");
     var im = require("interface-manager");
 
@@ -24,7 +24,6 @@
     }
 
     function testCustomToast() {
-        // Provided by host via JSModule.registerToastHelpers
         module.longToast(getCustomPrompt());
     }
 
@@ -50,27 +49,22 @@
                 });
             });
         });
+
     }
 
     // Manager-side: run when enabling through the manager
     module.onSnapEnhanceLoad = function () {
-        if (module.currentSide === "manager") {
-            createManagerToolBoxUI();
-        }
+        if (module.currentSide === "manager") createManagerToolBoxUI();
     };
 
     // Both sides: re-register UI after reconnect
     module.onBridgeConnected = function (reloaded) {
-        if (module.currentSide === "manager") {
-            createManagerToolBoxUI();
-        }
+        if (module.currentSide === "manager") createManagerToolBoxUI();
     };
 
     // Core-side: show the toast on app load
-    module.onSnapApplicationLoad = function (/* androidContext */) {
-        if (module.currentSide === "core") {
-            testCustomToast();
-        }
+    module.onSnapApplicationLoad = function () {
+        if (module.currentSide === "core") testCustomToast();
     };
 
     // Core-side: defined (no-op for this script) to satisfy host call
@@ -78,7 +72,5 @@
         // no-op
     };
 
-    module.exports = {
-        testCustomToast: testCustomToast
-    };
+    module.exports = { testCustomToast: testCustomToast };
 })();
