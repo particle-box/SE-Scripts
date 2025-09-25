@@ -7,17 +7,21 @@
 // ==/SE_module==
 
 (function () {
-    // Ensure module object exists
+    // Ensure module exists
     globalThis.module = globalThis.module || { exports: {} };
 
-    // Safe require (Zipline require throws if binding is missing)
+    // Safe require (returns undefined if binding absent)
     function safeRequire(name) {
-        try { return require(name); } catch (_) { return undefined; }
+        try {
+            return require(name);
+        } catch (_) {
+            return undefined;
+        }
     }
 
     // Bindings
     var config = safeRequire("config");
-    var im = safeRequire("interface-manager"); // available on manager side only
+    var im = safeRequire("interface-manager"); // only present on manager side
 
     var defaultPrompt = "Welcome back to Snapchat";
 
@@ -30,14 +34,12 @@
     }
 
     function testCustomToast() {
-        // Provided by host (JSModule.registerToastHelpers)
         if (module && typeof module.longToast === "function") {
             module.longToast(getCustomPrompt());
         }
     }
 
     function createManagerToolBoxUI() {
-        // Only build if the interface-manager binding exists on this (manager) side
         if (!im || typeof im.create !== "function") return;
 
         im.create("settings", function (builder /*, args */) {
@@ -63,7 +65,7 @@
         });
     }
 
-    // Helper to define lifecycle if missing or not a function
+    // Ensure lifecycle hooks are functions
     function ensureLifecycle(name, fn) {
         if (typeof globalThis.module[name] !== "function") {
             try {
@@ -71,41 +73,41 @@
             } catch (_) {
                 try {
                     Object.defineProperty(globalThis.module, name, {
-                        value: fn,
-                        configurable: true,
-                        writable: true,
-                        enumerable: false
+                        value: fn, configurable: true, writable: true, enumerable: false
                     });
                 } catch (_) { /* ignore */ }
             }
         }
     }
 
-    // Manager-side hook: called when enabling the script or after load in manager
-    ensureLifecycle("onSnapEnhanceLoad", function(/* androidContext */) {
+    // Manager-side: build settings UI when script is enabled/loaded
+    ensureLifecycle("onSnapEnhanceLoad", function () {
         if (module.currentSide === "manager") {
             createManagerToolBoxUI();
         }
     });
 
-    // Bridge connected on both sides (useful to re-register UI on manager)
-    ensureLifecycle("onBridgeConnected", function(reloaded) {
+    // Both sides: re-register UI after bridge reconnects
+    ensureLifecycle("onBridgeConnected", function (reloaded) {
         if (module.currentSide === "manager") {
             createManagerToolBoxUI();
         }
     });
 
-    // Core-side app load: show the toast early in app lifecycle
-    ensureLifecycle("onSnapApplicationLoad", function(/* androidContext */) {
+    // Core-side: show the toast on app load
+    ensureLifecycle("onSnapApplicationLoad", function () {
         if (module.currentSide === "core") {
             testCustomToast();
         }
     });
 
-    // Core-side: show the toast when main activity is created
-    ensureLifecycle("onSnapMainActivityCreate", function(activity) {
-        if (module.currentSide === "core" && typeof module.longToast === "function") {
-            module.longToast(getCustomPrompt());
-        }
+    // Core-side: defined to avoid errors; not needed for this script
+    ensureLifecycle("onSnapMainActivityCreate", function (/* activity */) {
+        // no-op
     });
+
+    // Optional exports
+    globalThis.module.exports = {
+        testCustomToast: testCustomToast
+    };
 })();
