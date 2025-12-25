@@ -1,13 +1,6 @@
 {
   "scripts": [
     {
-      "name": "bypass_checker",
-      "author": "ΞTΞRNAL",
-      "description": "A script which detects if the bypass that has been implemented is working on newer versions of Snapchat",
-      "version": "1.6",
-      "filepath": "scripts/bypass_checker.js"
-    },
-    {
       "name": "webui_script",
       "author": "ΞTΞRNAL & bocajthomas",
       "description": "This script displays a WebUI in Snapchat which allows you to play Games, read News, listen to the Radio, etc.",
