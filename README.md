@@ -13,39 +13,12 @@ A Scripts Repository for Snapenhance meant to enhance your Snapchat experience.
 <details closed>
 <summary> 🔍 Bypass Checker </summary>
 
-- **Name:** bypass_checker  
-- **Version:** 2.0  
-- **Last Updated:** August 14, 2025  
-- **Author:**  ΞTΞRNAL
-- **Description:** A script which detects if the bypass that has been implemented is working on newer versions of Snapchat
+**This script is now deprecated. You can use PurrfectSnap instead which is a fork of SnapEnhance which has a new bypass and many new features.**
 
-## 📌 Features
+[PurrfectSnap Repo Link](https://github.com/particle-box/PurrfectSnap)
 
-- `Detects if the Bypass is working`
-- `Notifies the user through toast messages`
-
-## ⬇️ Download
-
-To download the latest version of the script, choose one of the following options:
-
-1. **Import from URL:**
-
-   Copy & paste this URL in your script loader or environment:
-
-   [Press & Hold to Copy URL](https://raw.githubusercontent.com/particle-box/SE-Scripts/main/scripts/bypass_checker.js)
-
-2. **Download from GitHub:**
-
-   Click below to download the `Bypass Checker` script directly from GitHub:
-
-   [Download Bypass Checker](https://github.com/particle-box/SE-Scripts/blob/main/scripts/bypass_checker.js).
-
-## 🖼️ Screenshots
-
-<p align="center">
-  <img src="scripts/screenshots/bypass_checker_1.jpg" width="45%" style="margin-right:10px;" />
-  <img src="scripts/screenshots/bypass_checker_2.jpg" width="45%" />
-</p>
+[Reddit Post 1](https://www.reddit.com/r/SnapEnhanceApp/comments/1pe5gzb/update_changelogs_for_the_upcoming_major_release/?utm_source=share&utm_medium=mweb3x&utm_name=mweb3xcss&utm_term=1&utm_content=share_button)
+[Reddit Post 2](https://www.reddit.com/r/SnapEnhanceApp/comments/1pu1z3o/announcement_public_release_of_purrfectsnap/)
 
 </details>
 
